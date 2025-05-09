@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titel %} Adicione uma tarefa {% endblock %}
+
+{% block content %}
+
+<div class="list-div">
+
+    <h1>Adicione sua Tarefa:</h1>
+
+    <form method='POST'>
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" class="btn btn-success"
+        value="Criar Tarefa">
+
+    </form>
+
+
+</div>
+{% endblock %}
